@@ -1,0 +1,181 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.13.0
+2 info using node@v22.14.0
+3 silly config load:file:C:\Users\ASUS\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\ASUS\Desktop\resume\.npmrc
+5 silly config load:file:C:\Users\ASUS\.npmrc
+6 silly config load:file:C:\Users\ASUS\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install tailwindcss postcss autoprefixer
+8 verbose argv "install" "--save-dev" "tailwindcss" "postcss" "autoprefixer"
+9 verbose logfile logs-max:10 dir:C:\Users\ASUS\Desktop\resume\.npm-cache\_logs\2026-05-15T04_41_19_781Z-
+10 verbose logfile C:\Users\ASUS\Desktop\resume\.npm-cache\_logs\2026-05-15T04_41_19_781Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly idealTree buildDeps
+14 silly fetch manifest tailwindcss@*
+15 silly packumentCache full:https://registry.npmjs.org/tailwindcss cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/tailwindcss 591ms (cache miss)
+17 silly packumentCache full:https://registry.npmjs.org/tailwindcss set size:undefined disposed:false
+18 silly fetch manifest postcss@*
+19 silly packumentCache full:https://registry.npmjs.org/postcss cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/postcss 67ms (cache revalidated)
+21 silly packumentCache full:https://registry.npmjs.org/postcss set size:720302 disposed:false
+22 silly fetch manifest autoprefixer@*
+23 silly packumentCache full:https://registry.npmjs.org/autoprefixer cache-miss
+24 http fetch GET 200 https://registry.npmjs.org/autoprefixer 318ms (cache miss)
+25 silly packumentCache full:https://registry.npmjs.org/autoprefixer set size:undefined disposed:false
+26 silly placeDep ROOT autoprefixer@10.5.0 OK for:  want: *
+27 silly placeDep ROOT postcss@8.5.14 OK for: autoprefixer@10.5.0 want: ^8.1.0
+28 silly placeDep ROOT postcss@8.5.14 REPLACE for:  want: *
+29 silly placeDep ROOT tailwindcss@4.3.0 OK for:  want: *
+30 silly fetch manifest browserslist@^4.28.2
+31 silly packumentCache full:https://registry.npmjs.org/browserslist cache-miss
+32 silly fetch manifest caniuse-lite@^1.0.30001787
+33 silly packumentCache full:https://registry.npmjs.org/caniuse-lite cache-miss
+34 silly fetch manifest fraction.js@^5.3.4
+35 silly packumentCache full:https://registry.npmjs.org/fraction.js cache-miss
+36 silly fetch manifest picocolors@^1.1.1
+37 silly packumentCache full:https://registry.npmjs.org/picocolors cache-miss
+38 silly fetch manifest postcss-value-parser@^4.2.0
+39 silly packumentCache full:https://registry.npmjs.org/postcss-value-parser cache-miss
+40 silly fetch manifest nanoid@^3.3.11
+41 silly packumentCache full:https://registry.npmjs.org/nanoid cache-miss
+42 silly fetch manifest picocolors@^1.1.1
+43 silly packumentCache full:https://registry.npmjs.org/picocolors cache-miss
+44 http fetch GET 200 https://registry.npmjs.org/picocolors 144ms (cache revalidated)
+45 silly packumentCache full:https://registry.npmjs.org/picocolors set size:16648 disposed:false
+46 silly fetch manifest source-map-js@^1.2.1
+47 silly packumentCache full:https://registry.npmjs.org/source-map-js cache-miss
+48 http fetch GET 200 https://registry.npmjs.org/browserslist 154ms (cache revalidated)
+49 silly packumentCache full:https://registry.npmjs.org/browserslist set size:504681 disposed:false
+50 silly fetch manifest nanoid@^3.3.11
+51 silly packumentCache full:https://registry.npmjs.org/nanoid cache-miss
+52 http fetch GET 200 https://registry.npmjs.org/picocolors 166ms (cache revalidated)
+53 silly packumentCache full:https://registry.npmjs.org/picocolors set size:16648 disposed:false
+54 silly packumentCache full:https://registry.npmjs.org/picocolors dispose
+55 silly fetch manifest source-map-js@^1.2.1
+56 silly packumentCache full:https://registry.npmjs.org/source-map-js cache-miss
+57 http fetch GET 200 https://registry.npmjs.org/nanoid 172ms (cache revalidated)
+58 silly packumentCache full:https://registry.npmjs.org/nanoid set size:310559 disposed:false
+59 http fetch GET 200 https://registry.npmjs.org/caniuse-lite 188ms (cache revalidated)
+60 silly packumentCache full:https://registry.npmjs.org/caniuse-lite set size:2291079 disposed:false
+61 http fetch GET 200 https://registry.npmjs.org/source-map-js 71ms (cache revalidated)
+62 silly packumentCache full:https://registry.npmjs.org/source-map-js set size:62640 disposed:false
+63 http fetch GET 200 https://registry.npmjs.org/nanoid 94ms (cache revalidated)
+64 silly packumentCache full:https://registry.npmjs.org/nanoid set size:310559 disposed:false
+65 silly packumentCache full:https://registry.npmjs.org/nanoid dispose
+66 http fetch GET 200 https://registry.npmjs.org/source-map-js 89ms (cache revalidated)
+67 silly packumentCache full:https://registry.npmjs.org/source-map-js set size:62640 disposed:false
+68 silly packumentCache full:https://registry.npmjs.org/source-map-js dispose
+69 http fetch GET 200 https://registry.npmjs.org/fraction.js 284ms (cache miss)
+70 silly packumentCache full:https://registry.npmjs.org/fraction.js set size:undefined disposed:false
+71 http fetch GET 200 https://registry.npmjs.org/postcss-value-parser 349ms (cache miss)
+72 silly packumentCache full:https://registry.npmjs.org/postcss-value-parser set size:undefined disposed:false
+73 silly placeDep ROOT browserslist@4.28.2 OK for: autoprefixer@10.5.0 want: ^4.28.2
+74 silly placeDep ROOT caniuse-lite@1.0.30001792 OK for: autoprefixer@10.5.0 want: ^1.0.30001787
+75 silly placeDep ROOT fraction.js@5.3.4 OK for: autoprefixer@10.5.0 want: ^5.3.4
+76 silly placeDep ROOT picocolors@1.1.1 OK for: autoprefixer@10.5.0 want: ^1.1.1
+77 silly placeDep ROOT postcss-value-parser@4.2.0 OK for: autoprefixer@10.5.0 want: ^4.2.0
+78 silly fetch manifest baseline-browser-mapping@^2.10.12
+79 silly packumentCache full:https://registry.npmjs.org/baseline-browser-mapping cache-miss
+80 silly fetch manifest caniuse-lite@^1.0.30001782
+81 silly packumentCache full:https://registry.npmjs.org/caniuse-lite cache-miss
+82 silly fetch manifest electron-to-chromium@^1.5.328
+83 silly packumentCache full:https://registry.npmjs.org/electron-to-chromium cache-miss
+84 silly fetch manifest node-releases@^2.0.36
+85 silly packumentCache full:https://registry.npmjs.org/node-releases cache-miss
+86 silly fetch manifest update-browserslist-db@^1.2.3
+87 silly packumentCache full:https://registry.npmjs.org/update-browserslist-db cache-miss
+88 http cache https://registry.npmjs.org/caniuse-lite 21ms (cache hit)
+89 silly packumentCache full:https://registry.npmjs.org/caniuse-lite set size:2291079 disposed:false
+90 http fetch GET 200 https://registry.npmjs.org/baseline-browser-mapping 56ms (cache revalidated)
+91 silly packumentCache full:https://registry.npmjs.org/baseline-browser-mapping set size:479134 disposed:false
+92 http fetch GET 200 https://registry.npmjs.org/electron-to-chromium 68ms (cache revalidated)
+93 silly packumentCache full:https://registry.npmjs.org/electron-to-chromium set size:4794555 disposed:false
+94 http fetch GET 200 https://registry.npmjs.org/update-browserslist-db 112ms (cache revalidated)
+95 silly packumentCache full:https://registry.npmjs.org/update-browserslist-db set size:62000 disposed:false
+96 http fetch GET 200 https://registry.npmjs.org/node-releases 115ms (cache revalidated)
+97 silly packumentCache full:https://registry.npmjs.org/node-releases set size:276946 disposed:false
+98 silly fetch manifest browserslist@>= 4.21.0
+99 silly packumentCache full:https://registry.npmjs.org/browserslist cache-hit
+100 silly placeDep ROOT baseline-browser-mapping@2.10.29 OK for: browserslist@4.28.2 want: ^2.10.12
+101 silly placeDep ROOT electron-to-chromium@1.5.356 OK for: browserslist@4.28.2 want: ^1.5.328
+102 silly placeDep ROOT node-releases@2.0.44 OK for: browserslist@4.28.2 want: ^2.0.36
+103 silly placeDep ROOT update-browserslist-db@1.2.3 OK for: browserslist@4.28.2 want: ^1.2.3
+104 silly fetch manifest escalade@^3.2.0
+105 silly packumentCache full:https://registry.npmjs.org/escalade cache-miss
+106 http fetch GET 200 https://registry.npmjs.org/escalade 60ms (cache revalidated)
+107 silly packumentCache full:https://registry.npmjs.org/escalade set size:33724 disposed:false
+108 silly placeDep ROOT nanoid@3.3.12 OK for: postcss@8.5.14 want: ^3.3.11
+109 silly placeDep ROOT source-map-js@1.2.1 OK for: postcss@8.5.14 want: ^1.2.1
+110 silly placeDep ROOT escalade@3.2.0 OK for: update-browserslist-db@1.2.3 want: ^3.2.0
+111 silly reify moves {}
+112 silly audit bulk request {
+112 silly audit   'framer-motion': [ '12.38.0' ],
+112 silly audit   'motion-dom': [ '12.38.0' ],
+112 silly audit   'motion-utils': [ '12.36.0' ],
+112 silly audit   react: [ '19.2.6' ],
+112 silly audit   'react-icons': [ '5.6.0' ],
+112 silly audit   tslib: [ '2.8.1' ],
+112 silly audit   autoprefixer: [ '10.5.0' ],
+112 silly audit   postcss: [ '8.5.14' ],
+112 silly audit   tailwindcss: [ '4.3.0' ],
+112 silly audit   browserslist: [ '4.28.2' ],
+112 silly audit   'caniuse-lite': [ '1.0.30001792' ],
+112 silly audit   'fraction.js': [ '5.3.4' ],
+112 silly audit   picocolors: [ '1.1.1' ],
+112 silly audit   'postcss-value-parser': [ '4.2.0' ],
+112 silly audit   'baseline-browser-mapping': [ '2.10.29' ],
+112 silly audit   'electron-to-chromium': [ '1.5.356' ],
+112 silly audit   'node-releases': [ '2.0.44' ],
+112 silly audit   'update-browserslist-db': [ '1.2.3' ],
+112 silly audit   nanoid: [ '3.3.12' ],
+112 silly audit   'source-map-js': [ '1.2.1' ],
+112 silly audit   escalade: [ '3.2.0' ]
+112 silly audit }
+113 http cache escalade@https://registry.npmjs.org/escalade/-/escalade-3.2.0.tgz 0ms (cache hit)
+114 http cache nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.12.tgz 0ms (cache hit)
+115 http cache source-map-js@https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz 0ms (cache hit)
+116 http cache update-browserslist-db@https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz 0ms (cache hit)
+117 http cache node-releases@https://registry.npmjs.org/node-releases/-/node-releases-2.0.44.tgz 0ms (cache hit)
+118 http cache electron-to-chromium@https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.5.356.tgz 0ms (cache hit)
+119 http cache fraction.js@https://registry.npmjs.org/fraction.js/-/fraction.js-5.3.4.tgz 0ms (cache hit)
+120 http cache postcss-value-parser@https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz 0ms (cache hit)
+121 http cache baseline-browser-mapping@https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.10.29.tgz 0ms (cache hit)
+122 http cache caniuse-lite@https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001792.tgz 0ms (cache hit)
+123 http cache browserslist@https://registry.npmjs.org/browserslist/-/browserslist-4.28.2.tgz 0ms (cache hit)
+124 http cache tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.3.0.tgz 0ms (cache hit)
+125 http cache picocolors@https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz 0ms (cache hit)
+126 silly tarball no local data for fraction.js@https://registry.npmjs.org/fraction.js/-/fraction.js-5.3.4.tgz. Extracting by manifest.
+127 silly tarball no local data for postcss-value-parser@https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz. Extracting by manifest.
+128 http cache postcss@https://registry.npmjs.org/postcss/-/postcss-8.5.14.tgz 0ms (cache hit)
+129 http cache autoprefixer@https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.5.0.tgz 0ms (cache hit)
+130 silly tarball no local data for tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.3.0.tgz. Extracting by manifest.
+131 silly tarball no local data for autoprefixer@https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.5.0.tgz. Extracting by manifest.
+132 http fetch GET 200 https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz 203ms (cache miss)
+133 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 262ms
+134 silly audit report {}
+135 http fetch GET 200 https://registry.npmjs.org/fraction.js/-/fraction.js-5.3.4.tgz 289ms (cache miss)
+136 http fetch GET 200 https://registry.npmjs.org/tailwindcss/-/tailwindcss-4.3.0.tgz 392ms (cache miss)
+137 http fetch GET 200 https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.5.0.tgz 553ms (cache miss)
+138 silly ADD node_modules/escalade
+139 silly ADD node_modules/source-map-js
+140 silly ADD node_modules/nanoid
+141 silly ADD node_modules/update-browserslist-db
+142 silly ADD node_modules/node-releases
+143 silly ADD node_modules/electron-to-chromium
+144 silly ADD node_modules/baseline-browser-mapping
+145 silly ADD node_modules/postcss-value-parser
+146 silly ADD node_modules/picocolors
+147 silly ADD node_modules/fraction.js
+148 silly ADD node_modules/caniuse-lite
+149 silly ADD node_modules/browserslist
+150 silly ADD node_modules/tailwindcss
+151 silly ADD node_modules/postcss
+152 silly ADD node_modules/autoprefixer
+153 verbose cwd C:\Users\ASUS\Desktop\resume
+154 verbose os Windows_NT 10.0.26200
+155 verbose node v22.14.0
+156 verbose npm  v11.13.0
+157 verbose exit 0
+158 info ok
