@@ -1,3 +1,5 @@
+
+
 function Projects() {
   return (
     <section id="projects"  style={styles.section}>
@@ -35,12 +37,22 @@ function Projects() {
              REST API
             Printer SDK</p>
         </div>
-
+         </div>
+       <div style={styles.skillsContainer}>
+  <h3 style={styles.subHeading}>Programming Skills</h3>
+  
+  <div style={styles.skillCard}>
+    <p style={styles.skillText}>
+      Flutter (Advanced)<br />
+      Firebase (Advanced)<br />
+      Cloud Firestore (Advanced)<br />
+      REST API (Proficient)
+    </p>
+  </div>
+</div>
         
-        
-     
-      </div>
-
+         
+       
     </section>
   );
 }
