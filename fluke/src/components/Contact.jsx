@@ -1,89 +1,60 @@
-// Contact.jsx
-import { FaGithub, FaInstagram, FaEnvelope } from 'react-icons/fa'; // ติดตั้งด้วย npm install react-icons
+import { FaArrowRight, FaEnvelope, FaGithub, FaInstagram } from "react-icons/fa";
+
+const contactLinks = [
+  {
+    label: "Email",
+    value: "hlakdee7403@gmail.com",
+    href: "mailto:hlakdee7403@gmail.com",
+    icon: FaEnvelope,
+  },
+  {
+    label: "GitHub",
+    value: "github.com/Korrakit102",
+    href: "https://github.com/Korrakit102",
+    icon: FaGithub,
+  },
+  {
+    label: "Instagram",
+    value: "instagram.com/135_kit",
+    href: "https://www.instagram.com/135_kit/",
+    icon: FaInstagram,
+  },
+];
 
 function Contact() {
   return (
-    <section id="contact" style={styles.section}>
-      <h2 style={styles.heading}>Contact Me</h2>
-      <p style={styles.subText}>I am currently looking for new opportunities. My inbox is always open.</p>
-      
-      <div style={styles.iconContainer}>
-        {/* Email */}
-        <a href="mailto:hlakdee7403@gmail.com" style={styles.iconLink} title="Send Email">
-          <FaEnvelope style={styles.icon} />
-          <span style={styles.label}>Email</span>
-        </a>
+    <section id="contact" className="section contact-section reveal" aria-labelledby="contact-title">
+      <div className="section-inner contact-layout">
+        <div>
+          <p className="section-kicker">Contact</p>
+          <h2 id="contact-title" className="section-title">Let's Build Useful Software</h2>
+          <p>
+            I am currently looking for new opportunities in software engineering, full-stack
+            development, and software testing.
+          </p>
+        </div>
 
-        {/* GitHub */}
-        <a 
-          href="https://github.com/Korrakit102" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          style={styles.iconLink} 
-          title="GitHub Profile"
-        >
-          <FaGithub style={styles.icon} />
-          <span style={styles.label}>GitHub</span>
-        </a>
-
-        {/* Instagram */}
-        <a 
-          href="https://www.instagram.com/135_kit/" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          style={styles.iconLink} 
-          title="Instagram Profile"
-        >
-          <FaInstagram style={styles.icon} />
-          <span style={styles.label}>Instagram</span>
-        </a>
+        <div className="contact-links">
+          {contactLinks.map(({ label, value, href, icon: Icon }) => (
+            <a
+              className="contact-link"
+              href={href}
+              key={label}
+              target={label === "Email" ? undefined : "_blank"}
+              rel={label === "Email" ? undefined : "noopener noreferrer"}
+            >
+              <Icon aria-hidden="true" />
+              <span>
+                <strong>{label}</strong>
+                <small>{value}</small>
+              </span>
+              <FaArrowRight aria-hidden="true" />
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );
 }
-
-const styles = {
-  section: {
-    padding: "100px 20px",
-    textAlign: "center",
-    background: "#ffffff",
-  },
-  heading: {
-    fontSize: "2.5rem",
-    marginBottom: "20px",
-    color: "#2c3e50",
-    fontWeight: "bold"
-  },
-  subText: {
-    color: "#7f8c8d",
-    fontSize: "1.1rem",
-    marginBottom: "50px",
-    maxWidth: "600px",
-    margin: "0 auto 50px auto"
-  },
-  iconContainer: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "40px",
-    flexWrap: "wrap"
-  },
-  iconLink: {
-    textDecoration: "none",
-    color: "#3866d1", // สีหลักของ Theme คุณ
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    transition: "transform 0.3s ease, color 0.3s ease",
-  },
-  icon: {
-    fontSize: "3.2rem",
-    marginBottom: "10px",
-  },
-  label: {
-    fontSize: "0.95rem",
-    fontWeight: "600",
-    color: "#2c3e50"
-  }
-};
 
 export default Contact;

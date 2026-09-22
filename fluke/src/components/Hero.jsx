@@ -1,110 +1,130 @@
-// Hero.jsx
+import { useRef } from "react";
+import { FaArrowRight, FaEnvelope, FaGithub } from "react-icons/fa";
 import profile from "../assets/jj.jpg";
 
 function Hero() {
+  const portraitRef = useRef(null);
+
+  const handlePointerMove = (event) => {
+    if (
+      !window.matchMedia("(hover: hover) and (pointer: fine)").matches ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      return;
+    }
+
+    const element = portraitRef.current;
+    if (!element) return;
+
+    const rect = element.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 7;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * -7;
+
+    element.style.setProperty("--tilt-x", `${x}deg`);
+    element.style.setProperty("--tilt-y", `${y}deg`);
+  };
+
+  const resetTilt = () => {
+    if (!portraitRef.current) return;
+    portraitRef.current.style.setProperty("--tilt-x", "0deg");
+    portraitRef.current.style.setProperty("--tilt-y", "0deg");
+  };
+
   return (
-    <section id="home" style={styles.hero}>
-      <div style={styles.container}>
-        {/* ส่วนรูปภาพและหัวข้อหลัก */}
-        <div style={styles.header}>
-          <img src={profile} alt="hero" style={styles.image} />
-          <div style={styles.titleGroup}>
-            <h1 style={styles.title}>SOFTWARE ENGINEER</h1>
-            <h2 style={styles.subtitle}>Full Stack Developer & AI integration</h2>
+    <>
+      <section id="home" className="hero-section">
+        <div className="section-inner hero-grid">
+          <div className="hero-copy">
+            <p className="hero-kicker">Hi, I'm Fluke.</p>
+            <h1>
+              <span>Software</span>
+              <span>Engineer</span>
+            </h1>
+            <p className="hero-subtitle">Full-stack Development & AI Integration</p>
+            <p className="hero-description">
+              Fourth-year Software Engineering student at Mae Fah Luang University, focused on
+              building practical full-stack systems with Firebase, Flutter, AI integration, and
+              cybersecurity-aware testing workflows.
+            </p>
+
+            <div className="hero-actions" aria-label="Primary actions">
+              <a className="button button-primary" href="#projects">
+                View Projects
+                <FaArrowRight aria-hidden="true" />
+              </a>
+              <a className="button button-secondary" href="#contact">
+                Contact Me
+                <FaEnvelope aria-hidden="true" />
+              </a>
+            </div>
+
+            <div className="hero-links" aria-label="Professional links">
+              <a
+                href="https://github.com/Korrakit102"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub aria-hidden="true" />
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          <div className="hero-visual" aria-label="Profile portrait and technical focus">
+            <div
+              className="portrait-stage"
+              ref={portraitRef}
+              onPointerMove={handlePointerMove}
+              onPointerLeave={resetTilt}
+            >
+              <div className="portrait-frame">
+                <img src={profile} alt="Fluke profile portrait" />
+              </div>
+              <span className="floating-tag tag-fullstack">Full-stack</span>
+              <span className="floating-tag tag-ai">AI Integration</span>
+              <span className="floating-tag tag-testing">Software Testing</span>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* ส่วนเนื้อหา About Me จัดเรียงจากซ้ายไปขวา */}
-        <div style={styles.textBox}>
-          <h3 style={styles.sectionTitle}>About me</h3>
-          <p style={styles.paragraph}>
-            Hello, my name is Fluke. I'm currently a fourth-year Software Engineering student at Mae Fah Luang University. 
-            My interests lie in full-stack development, cybersecurity, and artificial intelligence, 
-            particularly building robust systems that integrate AI solutions with real-world cybersecurity applications.
-          </p>
+      <section className="section about-section reveal" aria-labelledby="about-title">
+        <div className="section-inner about-layout">
+          <div>
+            <p className="section-kicker">About</p>
+            <h2 id="about-title" className="section-title">Engineering Practical Systems</h2>
+          </div>
 
-          <p style={styles.paragraph}>
-            I strongly believe in learning through real-world experience. 
-            Having worked on complex architectural projects, such as those using AI in system development and cybersecurity, 
-            and gaining practical experience during my internship, I am eager to take on new challenges, learn new things, 
-            and contribute to creating impactful technological innovations.
-          </p>
+          <div className="about-content">
+            <p>
+              I learn best through real projects, from POS and e-commerce applications to
+              warehouse stock systems and browser-based testing. My work combines full-stack
+              development, cybersecurity fundamentals, and AI integration with a focus on systems
+              that are useful, maintainable, and ready for real users.
+            </p>
+
+            <div className="focus-list" aria-label="Technical focus areas">
+              <div className="focus-item">
+                <span>01</span>
+                <strong>Full-stack Development</strong>
+                <p>Flutter, Firebase, Firestore, REST API, and web application workflows.</p>
+              </div>
+              <div className="focus-item">
+                <span>02</span>
+                <strong>Cybersecurity</strong>
+                <p>Network security, incident response, access control, and UAT awareness.</p>
+              </div>
+              <div className="focus-item">
+                <span>03</span>
+                <strong>AI Integration</strong>
+                <p>Applying AI concepts to software systems and testing support workflows.</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        {/* <button style={styles.button}>View My Work</button> */}
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
-
-const styles = {
-  hero: {
-    padding: "100px 20px",
-    background: "#ffffff",
-    display: "flex",
-    justifyContent: "center",
-  },
-  container: {
-    maxWidth: "900px",
-    width: "100%",
-    textAlign: "left", // บังคับให้ข้อความทั้งหมดเริ่มจากซ้าย
-  },
-  header: {
-    display: "flex",
-    alignItems: "center",
-    gap: "30px",
-    marginBottom: "40px",
-    flexWrap: "wrap", // รองรับหน้าจอมือถือ
-  },
-  image: {
-    width: "180px",
-    height: "180px",
-    borderRadius: "50%",
-    objectFit: "cover",
-    border: "4px solid #3866d1",
-  },
-  titleGroup: {
-    flex: 1,
-  },
-  title: {
-    fontSize: "3rem",
-    margin: 0,
-    color: "#2c3e50",
-    fontWeight: "bold",
-  },
-  subtitle: {
-    fontSize: "1.5rem",
-    color: "#3866d1",
-    margin: "10px 0 0 0",
-  },
-  textBox: {
-    marginTop: "20px",
-  },
-  sectionTitle: {
-    fontSize: "1.8rem",
-    color: "#2c3e50",
-    borderBottom: "3px solid #3866d1",
-    display: "inline-block",
-    marginBottom: "20px",
-  },
-  paragraph: {
-    lineHeight: "1.8",
-    fontSize: "1.1rem",
-    color: "#444",
-    marginBottom: "20px",
-  },
-  button: {
-    marginTop: "30px",
-    padding: "12px 30px",
-    background: "#3866d1",
-    color: "white",
-    border: "none",
-    borderRadius: "8px",
-    fontSize: "1rem",
-    fontWeight: "600",
-    cursor: "pointer",
-    transition: "0.3s",
-  },
-};
 
 export default Hero;
