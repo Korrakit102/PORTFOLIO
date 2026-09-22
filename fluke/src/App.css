@@ -576,7 +576,6 @@ body.modal-open {
 }
 
 .tech-list span,
-.skills-ribbon span,
 .timeline-tools span {
   display: inline-flex;
   align-items: center;
@@ -591,11 +590,36 @@ body.modal-open {
 }
 
 .skills-ribbon {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
   margin-top: 34px;
   padding-top: 22px;
+}
+
+.skill-group {
+  min-height: 118px;
+  padding: 20px;
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(219, 234, 254, 0.7)),
+    #ffffff;
+  box-shadow: 0 16px 42px rgba(15, 23, 42, 0.06);
+}
+
+.skill-group h3 {
+  margin-bottom: 10px;
+  color: #1e3a8a;
+  font-size: 0.9rem;
+  font-weight: 850;
+}
+
+.skill-group p {
+  color: var(--color-text);
+  font-size: 0.98rem;
+  font-weight: 650;
+  line-height: 1.65;
 }
 
 .project-modal {
@@ -1053,6 +1077,10 @@ body.modal-open {
     order: initial;
   }
 
+  .skills-ribbon {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .timeline::before {
     left: 11px;
   }
@@ -1097,6 +1125,10 @@ body.modal-open {
 
   .section-heading {
     margin-bottom: 38px;
+  }
+
+  .skills-ribbon {
+    grid-template-columns: 1fr;
   }
 
   .nav-inner {
@@ -1279,9 +1311,21 @@ body.modal-open {
 
   .project-fact-panel li,
   .tech-list span,
-  .skills-ribbon span,
   .timeline-tools span {
     font-size: 0.82rem;
+  }
+
+  .skill-group {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .skill-group h3 {
+    font-size: 0.84rem;
+  }
+
+  .skill-group p {
+    font-size: 0.92rem;
   }
 }
 

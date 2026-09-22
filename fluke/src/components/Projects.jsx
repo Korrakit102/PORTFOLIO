@@ -1,5 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
 import { FaArrowRight, FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
+import eventStockCreateEvent from "../assets/projects/event-stock-create-event.png";
+import eventStockEvents from "../assets/projects/event-stock-events.png";
+import eventStockIssueReturnEmpty from "../assets/projects/event-stock-issue-return-empty.png";
+import eventStockReportsDamage from "../assets/projects/event-stock-reports-damage.png";
+import eventStockStock from "../assets/projects/event-stock-stock.png";
+import eventStockWarehouseEvents from "../assets/projects/event-stock-warehouse-events.png";
+import eventStockWarehouseIssueReturn from "../assets/projects/event-stock-warehouse-issue-return.png";
 import posCashier from "../assets/projects/pos-cashier.png";
 import posDashboard from "../assets/projects/pos-dashboard.png";
 import posMenu from "../assets/projects/pos-menu.png";
@@ -47,17 +54,47 @@ const projects = [
     ],
   },
   {
-    title: "Warehouse Stock Management System",
-    type: "Academic Project",
-    role: "Full Stack Developer",
+    title: "Event & Stock Management",
+    type: "Senior Project",
+    role: "Project Manager, Full-stack Developer",
     description:
-      "Web application for automotive spare part inventory management, focused on stock visibility and warehouse data structure.",
-    stack: ["Web Application", "Cloud Firestore", "Database Architecture"],
-    facts: ["Stock tracking", "Warehouse data", "Supply chain workflow"],
+      "Senior project built with Isuzu Nok Ngeuak Chiang Rai to manage event operations, equipment stock, issue and return workflows, damage tracking, document generation, role-based access, and summary reports.",
+    stack: ["Next.js", "Nuxt.js", "PostgreSQL", "MinIO"],
+    facts: ["Isuzu Nok Ngeuak Chiang Rai", "Event and equipment stock", "Issue, return, and damage workflow", "Invoices, quotations, and reports"],
+    images: [
+      { src: eventStockCreateEvent, alt: "Event and stock management create event modal with required event fields" },
+      { src: eventStockEvents, alt: "Event and stock management event listing screen for manager role" },
+      { src: eventStockStock, alt: "Event and stock management stock dashboard with equipment summary and inventory table" },
+      { src: eventStockIssueReturnEmpty, alt: "Event and stock management issue and return equipment screen with status summary cards" },
+      { src: eventStockReportsDamage, alt: "Event and stock management damage report table with invoice actions" },
+      { src: eventStockWarehouseEvents, alt: "Event and stock management event listing screen for warehouse staff role" },
+      { src: eventStockWarehouseIssueReturn, alt: "Event and stock management active issue and return equipment workflow for warehouse staff" },
+    ],
   },
 ];
 
-const skills = ["Flutter - Advanced", "Firebase - Advanced", "Cloud Firestore - Advanced", "REST API - Proficient"];
+const skillGroups = [
+  {
+    label: "Programming Languages",
+    items: "Dart, JavaScript, TypeScript, SQL, HTML, CSS",
+  },
+  {
+    label: "Mobile & Web",
+    items: "Flutter, React, Next.js, Tailwind CSS",
+  },
+  {
+    label: "Backend & Data",
+    items: "Firebase Authentication, Cloud Firestore, Firebase, REST APIs",
+  },
+  {
+    label: "Testing",
+    items: "Playwright, Agent Browser, Manual Testing, UI Testing, Test Script Design",
+  },
+  {
+    label: "Tools & Knowledge",
+    items: "Git, GitHub, Docker, Postman, VS Code, Figma, Vercel, RBAC, State Management",
+  },
+];
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -171,9 +208,12 @@ function Projects() {
           ))}
         </div>
 
-        <div className="skills-ribbon" aria-label="Programming skills">
-          {skills.map((skill) => (
-            <span key={skill}>{skill}</span>
+        <div className="skills-ribbon" aria-label="Technical skills">
+          {skillGroups.map((group) => (
+            <article className="skill-group" key={group.label}>
+              <h3>{group.label}</h3>
+              <p>{group.items}</p>
+            </article>
           ))}
         </div>
       </div>
