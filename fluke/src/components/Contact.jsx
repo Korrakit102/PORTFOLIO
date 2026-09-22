@@ -1,4 +1,4 @@
-import { FaArrowRight, FaEnvelope, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaArrowRight, FaEnvelope, FaGithub } from "react-icons/fa";
 
 const contactLinks = [
   {
@@ -13,12 +13,7 @@ const contactLinks = [
     href: "https://github.com/Korrakit102",
     icon: FaGithub,
   },
-  {
-    label: "Instagram",
-    value: "instagram.com/135_kit",
-    href: "https://www.instagram.com/135_kit/",
-    icon: FaInstagram,
-  },
+  
 ];
 
 function Contact() {
