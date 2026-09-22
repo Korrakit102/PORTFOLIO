@@ -65,7 +65,7 @@ function Navbar() {
     <nav className="navbar" aria-label="Primary navigation">
       <div className="nav-inner">
         <a className="nav-brand" href="#home" onClick={() => setIsMenuOpen(false)}>
-          Fluke
+          Korrakit
         </a>
 
         <button

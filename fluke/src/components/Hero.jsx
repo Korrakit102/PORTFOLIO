@@ -35,7 +35,7 @@ function Hero() {
       <section id="home" className="hero-section">
         <div className="section-inner hero-grid">
           <div className="hero-copy">
-            <p className="hero-kicker">Hi, I'm Fluke.</p>
+            <p className="hero-kicker">Hi, I'm Korrakit.</p>
             <h1>
               <span>Software</span>
               <span>Engineer</span>
@@ -78,7 +78,7 @@ function Hero() {
               onPointerLeave={resetTilt}
             >
               <div className="portrait-frame">
-                <img src={profile} alt="Fluke profile portrait" />
+                <img src={profile} alt="Korrakit profile portrait" />
               </div>
               <span className="floating-tag tag-fullstack">Full-stack</span>
               <span className="floating-tag tag-ai">AI Integration</span>

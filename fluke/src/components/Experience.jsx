@@ -2,7 +2,7 @@ const experiences = [
   {
     title: "Freelance Software Engineer",
     organization: "POScafebaansoi5 Project",
-    date: "2024 - Present",
+    date: "2025 - Present",
     bullets: [
       "Developed a comprehensive Point of Sale (POS) system using Flutter for a seamless cross-platform experience.",
       "Engineered backend and real-time database management using Firebase and Cloud Firestore.",
